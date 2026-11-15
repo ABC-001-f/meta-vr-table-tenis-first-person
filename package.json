@@ -1,0 +1,30 @@
+{
+  "name": "pingverse-vr",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "PINGVERSE VR - first-person hand-tracked table tennis for Meta Quest (IWSDK / WebXR)",
+  "engines": {
+    "node": ">=20.19.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "server": "node server/server.ts",
+    "test": "node --test tests/",
+    "build:humans": "node tools/build-humans.ts"
+  },
+  "dependencies": {
+    "@iwsdk/core": "1.1.0-rc.2",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "@types/ws": "^8.5.13",
+    "@vitejs/plugin-basic-ssl": "^2.0.0",
+    "typescript": "^5.7.0",
+    "vite": "^7.0.0"
+  }
+}

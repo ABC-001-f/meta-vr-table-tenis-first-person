@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <title>PINGVERSE VR</title>
+    <link rel="icon" href="data:," />
+    <style>
+      html,
+      body {
+        margin: 0;
+        height: 100%;
+        overflow: hidden;
+        background: #05070d;
+        font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+        color: #fff;
+      }
+      #scene {
+        position: fixed;
+        inset: 0;
+      }
+      #scene canvas {
+        display: block;
+        touch-action: none;
+      }
+      #overlay {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 14px 18px;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        background: linear-gradient(transparent, rgba(5, 7, 13, 0.92));
+        pointer-events: none;
+      }
+      #overlay h1 {
+        margin: 0;
+        font-size: 20px;
+        font-weight: 800;
+        letter-spacing: 0.12em;
+      }
+      #status {
+        flex: 1;
+        font-size: 16px;
+        color: #d4def0;
+      }
+      #enter {
+        pointer-events: auto;
+        font: inherit;
+        font-weight: 700;
+        font-size: 17px;
+        padding: 12px 26px;
+        border-radius: 999px;
+        border: 0;
+        color: #04121c;
+        background: #35c8ff;
+        cursor: pointer;
+      }
+      #enter:disabled {
+        background: #3a4358;
+        color: #8892a8;
+        cursor: default;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="scene"></div>
+    <div id="overlay">
+      <h1>PINGVERSE VR</h1>
+      <div id="status">Loading...</div>
+      <button id="enter" disabled>Enter VR</button>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
